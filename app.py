@@ -13,6 +13,7 @@ def index():
 
 @app.route('/generate_lyrics', methods=['POST'])
 def generate_lyrics():
+    print(openai.api_key)
     prompt = request.form['prompt']
     genre = request.form['genre']
     keyword1 = request.form.get('keyword1', '')
